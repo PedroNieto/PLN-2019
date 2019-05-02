@@ -6,6 +6,7 @@ Usage:
 
 Options:
   -i <corpus>   Training corpus.
+  -d <development> Development corpus.
   -m <model>    Model to use [default: basemf]:
                   basemf: Most frequent sentiment
                   clf: Machine Learning Classifier
@@ -37,7 +38,12 @@ if __name__ == '__main__':
     corpus = opts['-i']
     reader = InterTASSReader(corpus)
     X, y = list(reader.X()), list(reader.y())
-
+    development = opts['-d']
+    reader = InterTASSReader(development)
+    X_dev, y_dev = list(reader.X()), list(reader.y())
+    
+    
+    
     # train model
     model_type = opts['-m']
     if model_type == 'clf':
@@ -45,7 +51,7 @@ if __name__ == '__main__':
     else:
         model = models[model_type]()  # baseline
 
-    model.fit(X, y)
+    model.fit(X, y, X_dev, y_dev)
 
     # save model
     filename = opts['-o']

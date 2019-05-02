@@ -1,13 +1,13 @@
 """Evaulate a Sentiment Analysis model.
 
 Usage:
-  eval.py -c <corpus> -i <file>
+  eval.py -c <corpus> -i <file> [-f <file>]
   eval.py -h | --help
 
 Options:
   -c <corpus>   Evaluation corpus.
   -i <file>     Trained model file.
-  -f --final    Use final test set instead of development.
+  -f <file>     Use final test set instead of development.
   -h --help     Show this screen.
 """
 from docopt import docopt
@@ -29,7 +29,9 @@ if __name__ == '__main__':
 
     # load evaluation corpus
     corpus = opts['-c']
-    reader = InterTASSReader(corpus)
+    final = opts.get('-f', None)
+    reader = InterTASSReader(corpus, final)
+
     X, y_true = list(reader.X()), list(reader.y())
 
     # classify
