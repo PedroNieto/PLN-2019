@@ -41,7 +41,7 @@ En esta primer etapa vamos a evaluar el resultado de la implementación de 4 mej
 - Macro-F1: 41.08%
 
 |	|P|N |NEU	|NONE
-|---|--|----|----|
+|---|--|----|----|----|
 |P|98|35|13 |10
 |N|36|138|24|21
 |NEU|26|27|	8|8
@@ -71,12 +71,12 @@ En esta primer etapa vamos a evaluar el resultado de la implementación de 4 mej
 - Macro-F1: 42.06%
 
 
-|	|P|N |NEU	|NONE
-|---|--|----|----|
-|P|104|29|12|11
-|N|36|142|20|21
-|NEU|27|24|9|9
-|NONE|15|29|3|15
+|c	|P |N |NEU	|NONE 
+|----|---|---|---|---|
+| P |104|29|12|11
+| N |36|142|20|21
+| NEU |27|24|9|9
+| NONE |15|29|3|15
 
 
 ###  Stopwords - Resultados
@@ -103,7 +103,7 @@ En esta primer etapa vamos a evaluar el resultado de la implementación de 4 mej
 - Macro-F1: 38.18%
 
 |	|P|N |NEU	|NONE
-|---|--|----|----|
+|---|--|----|----|----|
 |P|87|51|11|7
 |N|22|157|23|17
 |NEU|15|42|7|5
@@ -135,7 +135,7 @@ En esta primer etapa vamos a evaluar el resultado de la implementación de 4 mej
 
 
 |	|P|N |NEU	|NONE
-|---|--|----|----|
+|---|--|----|----|----|
 |P|97|43|8|8
 |N|28|154|19|18
 |NEU|16|40|9|4
@@ -173,7 +173,7 @@ Los ejercicios 4 y 5 se encuentra en el archivo [model_inspection.ipynb](model_i
 - Macro-F1: 38.73%
 
 |	|P|N |NEU	|NONE
-|---|--|----|----|
+|---|--|----|----|----|
 |P|348|293|0|1
 |N|96|653|1|17
 |NEU|52|161|0|3
